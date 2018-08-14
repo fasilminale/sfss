@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Flask App</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+	<header>
+		<div class="container">
+
+			<h1 class="logo"> Fasil's web app</h1>
+			<strong>
+				<nav>
+					<ul class="menu">
+					<li> <a href="{{ url_for('home') }}">Home</a></li>
+					<li> <a href="{{ url_for('about') }}">About</a></li>
+					</ul>
+				</nav>
+			</strong>
+
+		</div>
+	</header>
+<!-- layout.html is base template child template ethire about,html or home.html fill here under div -->
+	<div class="container">
+		{%block content%}  <!-- templating syntax "content" is the name of the block -->
+		{%endblock%}
+	</div>
+
+</body>
+</html>
